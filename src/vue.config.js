@@ -13,7 +13,7 @@ const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
   runtimeCompiler: true,
   lintOnSave: false,
-  outputDir: "../dao",
+  outputDir: "../../dao",
   chainWebpack: (config) => {
     config.resolve.alias.set("@", resolve("src"));
   },
