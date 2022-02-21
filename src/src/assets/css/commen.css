@@ -1,0 +1,54 @@
+html,body,
+p,
+h3,
+h4,
+h5 {
+    font-family: Microsoft YaHei;
+    margin: 0px;
+    padding: 0px;
+}
+
+dd,
+dl,
+dt,
+li,
+ul {
+    display: block;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,video {
+    width: 100%;
+    height: 100%;
+}input{
+    outline: none;
+    border: none;
+}
+#app{
+    width: 100%;
+    margin: auto;
+}
+/* WebKit browsers */
+input::-webkit-input-placeholder {
+    color: #999999;
+    font-weight: normal;
+}
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+    color: #999999;
+    font-weight: normal;
+}
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+    color: #999999;
+    font-weight: normal;
+}
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+    color: #999999;
+    font-weight: normal;
+}

@@ -1,0 +1,52 @@
+.other{
+    background: #321a67;
+    overflow: hidden;
+}
+.other_main{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-top: 130px;
+    margin-bottom: 163px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+.other H1{
+    font-family: SourceHanSansCN-Bold;
+    font-size: 28px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 41px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.other H2{
+    font-family: SourceHanSansCN-Bold;
+    font-size: 20px;
+    color: #FDD000;
+    letter-spacing: 0.71px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.other H2:first-of-type{
+    margin-top: 19px;
+}
+.other p{
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.57px;
+    font-weight: 400;
+}
+.other span{
+    font-weight: bold;
+}
