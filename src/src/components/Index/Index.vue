@@ -8,6 +8,32 @@
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
+
+      <div class="stars-wrap stars-wrap-2">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
+
+      <div class="stars-wrap stars-wrap-3">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
+
+      <img v-if="gif1" :src="gif1" class="right-stars-1" />
+
+      <img v-if="gif2" :src="gif2" class="right-stars-2" />
+
+      <!-- 石头 -->
+      <div class="index_stone"></div>
+
+      <div class="index_stone_alpha stone-action"></div>
+
+      <!-- 图片星星先干掉 -->
+      <!-- <div class="png-stars mini-stars"></div>
+      <div class="png-stars big-stars"></div> -->
+
       <!-- <img
         src="../../assets/img/png/banner.png"
       /> -->
@@ -440,7 +466,7 @@
               </div>
             </div>
             <div class="index_roadmap_main_content_right">
-              <div class="index_roadmap_main_content_right_line" v-for="item in roadmapNameRealList">
+              <div class="index_roadmap_main_content_right_line" v-for="(item, index) in roadmapNameRealList" :key="index">
                 <div class="index_roadmap_main_content_right_line_img">
                   <img v-if="item.flag" src="../../assets/img/png/roadmap_right.png">
                 </div>
@@ -566,6 +592,8 @@ export default {
   },
   data() {
     return {
+      gif1: require('../../assets/img/png/stars1.gif'),
+      gif2: require('../../assets/img/png/stars2.gif'),
       data1: {
         line1: 'Current Price',
         line1Data: '0.00000284175 USD',
@@ -1026,6 +1054,52 @@ export default {
       this.initUrl()
     }, 1000 * 60)
     // this.setIntervalmethod();
+
+    const tempGif1 = this.gif1
+    const tempGif2 = this.gif2
+    this.gif1 = ''
+    this.gif2 = ''
+
+    let count = 0
+    setInterval(() => {
+      count++
+      if (count < 6) {
+        if (count === 4) {
+          this.gif2 = tempGif2
+        }
+
+        if (count === 5) {
+          this.gif1 = tempGif1
+        }
+      } else {
+        if (count === 8) {
+          this.gif2 = ''
+        }
+
+        if (count === 9) {
+          this.gif1 = ''
+        }
+
+        if (count === 15) {
+          this.gif2 = tempGif2
+        }
+
+        if (count === 16) {
+          this.gif1 = tempGif1
+        }
+
+        if (count === 18) {
+          count = 7
+        }
+      }
+    }, 500)
+    // setTimeout(() => {
+    //   this.gif2 = tempGif2
+    // }, 2000)
+
+    // setTimeout(() => {
+    //   this.gif1 = tempGif1
+    // }, 2600)
   },
   methods: {
     bindfunctionAll() {
